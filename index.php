@@ -18,7 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        echo "Login Successful!";
+      header("Location:booklist.php");
+      //echo "Login Successful!";
     } else {
         echo "User not found";
     }

@@ -18,7 +18,7 @@ if (!$conn) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book List</title>
+    <title>profile</title>
     <style>
         table {
             border-collapse: collapse;
@@ -34,41 +34,34 @@ if (!$conn) {
 </head>
 
 <body>
-    <table width="1100">
+    <table width="600">
         <tr>
-            <th>ISBN</th>
-            <th width="300">Title</th>
-            <th width="200">Author</th>
-            <th> Description</th>
-            <th>Price(RM)</th>
+            <th width="150">name</th>
+            <th width="200">email</th>
+            <th width="150">yearjoin</th>
         </tr>
+
         <?php
 
-        $query = "SELECT * FROM booklist";
+        $query = "SELECT * FROM student";
 
         $result = mysqli_query($conn, $query);
 
         while ($row = mysqli_fetch_assoc($result)) {
         ?>
             <tr>
-                <td><?php echo $row['ISBN']; ?></td>
-                <td><?php echo $row['title']; ?></td>
-                <td><?php echo $row['author']; ?></td>
-                <td><?php echo $row['description']; ?></td>
-                <td><?php echo $row['price']; ?></td>
-                <td><input type="button" value="Edit"></td>
-                <td><button>Delete</button></td>
+                <td><?php echo $row['name']; ?></td>
+                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['yearjoin']; ?></td>
+                <td><button>edit</button></td>
             </tr>
         <?php
         }
         mysqli_close($conn);
         ?>
+        <a href=""><input type="submit" value="back"></a>
 
-        <a href=""><input type="submit" value="Profile"></a>
-        <a href=""><input type="submit" value="AddBook"></a>
-        <a href=""><input type="submit" value="LogOut"></a>
     </table>
-
 </body>
 
 </html>
