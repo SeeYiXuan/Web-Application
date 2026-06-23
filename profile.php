@@ -3,6 +3,7 @@ $servername = "localhost";
 $username = "seeyixuan";
 $password = "@rtRJ83CAv2a2N_A";
 $dbname = "seeyixuan";
+session_start();
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -10,6 +11,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+$email = $_SESSION["email"];
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +45,7 @@ if (!$conn) {
 
         <?php
 
-        $query = "SELECT * FROM student";
+        $query = "SELECT * FROM student WHERE email='$email'";
 
         $result = mysqli_query($conn, $query);
 

@@ -10,6 +10,7 @@ $conn = mysqli_connect($servername, $username, $password, $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -64,10 +65,11 @@ if (!$conn) {
         mysqli_close($conn);
         ?>
 
-        <a href=""><input type="submit" value="Profile"></a>
-        <a href=""><input type="submit" value="AddBook"></a>
+        <a href="profile.php"><input type="submit" value="Profile"></a>
+        <a href="addBook.php"><input type="submit" value="AddBook"></a>
         <a href=""><input type="submit" value="LogOut"></a>
     </table>
+
 
 </body>
 
