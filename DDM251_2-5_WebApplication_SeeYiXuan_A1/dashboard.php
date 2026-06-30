@@ -38,9 +38,9 @@ if (!$conn) {
 
         <a href="dashboard.php">Dashboard</a>
 
-        <a href="#">Customer</a>
+        <a href="customerlist.php">Customer</a>
 
-        <a href="#">Product</a>
+        <a href="productlist.php">Product</a>
 
         <a href="#">Order</a>
 

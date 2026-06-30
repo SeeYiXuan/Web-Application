@@ -54,10 +54,12 @@ if (!$conn) {
     <div class="sidebar">
         <h4> YX SHOP</h4>
         <a href="dashboard.php">Dashboard</a>
-        <a href="#">Customer</a>
-        <a href="#">Product</a>
+        <a href="customerlist.php">Customer</a>
+        <a href="addcustomer.php">Create Customer</a>
+        <a href="customerlist.php">Customer List</a>
+        <a href="productlist.php">Product</a>
         <a href="#">Order</a>
-        <a href="logout.php">Logout</a>
+        <a href="#">Logout</a>
     </div>
 
     <div class="content">

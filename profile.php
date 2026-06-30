@@ -55,7 +55,7 @@ $email = $_SESSION["email"];
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['yearjoin']; ?></td>
-                <td><button>edit</button></td>
+                <td><button><a href="editprofile.php">edit</a></button></td>
             </tr>
         <?php
         }
